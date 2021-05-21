@@ -1,0 +1,10 @@
+:[ a = +@8 ] //Colons go before an assignment/reassignment
+:[ b = +@8 ]
+^[ start (b < +@20)] //A carot goes before the last command in a scope
+    [ start (a < +@20)]
+        [point((b,a))]
+        ^:[a = a + +@1] //Scope end followed by assignment's colon
+    [end]
+    :[b = b + +@1]
+    ^:[a = +@1]
+[end] //Start is the only part of loop that can use the end of scope char

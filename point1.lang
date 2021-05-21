@@ -1,0 +1,13 @@
+:[ a = +@15 ]
+:[ b = +@16 ]
+//only the if needs the end of scope if last if of scope or last if w/ else
+//if w/o else is preceded by a ?
+//if w/ else preceded by a ;
+//an empty scope can be made using :^;
+^;[ if(a == b) ] 	
+    ^[ point((a , b)) ]
+[ ifend ]
+[else]
+    :[ c = +@8 ]
+    ^[ point((b , c)) ]
+[elsend]

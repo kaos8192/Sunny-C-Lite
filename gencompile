@@ -1,0 +1,3 @@
+bison -d language.y
+flex language.l
+g++ lex.yy.c language.tab.c symtab.cpp node.cpp helper.cpp opcodes.cpp gMath.cpp gGraphix.cpp -lfl -o examplang
